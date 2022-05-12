@@ -39,7 +39,7 @@ export default () => {
 
       <TracingButton
         id="test-fetch-persons-button"
-        label={"Fetch persons"}
+        label={"Fetch Links"}
         onClick={fetchPersons}
       />
       {persons.length > 0 && (
