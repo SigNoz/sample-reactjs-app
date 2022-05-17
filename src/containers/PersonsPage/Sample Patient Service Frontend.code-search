@@ -1,9 +1,0 @@
-# Query: Sample Patient Service Frontend
-
-2 results - 2 files
-
-src/containers/PersonsPage/index.test.tsx:
-  6:   const headerElement = screen.getByText(/Sample Patient Service Frontend/i)
-
-src/containers/PersonsPage/index.tsx:
-  35:         <p>Sample Patient Service Frontend</p>

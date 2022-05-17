@@ -26,8 +26,10 @@ export default () => {
       traceSpan("persons", () => {
         setPersons(persons.entries);
       });
-    } finally {
-      toggleProgressIndicator(dispatch);
+    } catch (e) {
+      traceSpan("error", () => {
+        toggleProgressIndicator(dispatch);
+      });
     }
   };
 
