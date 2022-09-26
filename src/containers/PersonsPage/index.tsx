@@ -7,8 +7,6 @@ import { ILink } from "types/types";
 import PersonsList from "./PersonsList";
 
 import TracingButton from "components/TracingButton";
-
-import styles from "./styles.module.scss";
 import { traceSpan } from "helpers/tracing";
 
 export default () => {
@@ -24,6 +22,7 @@ export default () => {
         `https://api.publicapis.org/entries`
       );
       traceSpan("persons", () => {
+        toggleProgressIndicator(dispatch);
         setPersons(persons.entries);
       });
     } catch (e) {
@@ -34,8 +33,8 @@ export default () => {
   };
 
   return (
-    <div className={styles.app}>
-      <header className={styles.appHeader}>
+    <div>
+      <header>
         <p>Sample Signoz React Instrumentation App</p>
       </header>
 

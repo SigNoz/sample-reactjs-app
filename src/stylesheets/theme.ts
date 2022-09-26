@@ -1,18 +1,16 @@
 import { createTheme } from '@mui/material/styles'
 import { red } from '@mui/material/colors'
 
-import styles from 'stylesheets/colors.module.scss'
-
 export default createTheme({
   palette: {
     primary: {
-      main: styles.primaryColor
+      main: "#556cd6",
     },
     secondary: {
-      main: styles.secondaryColor
+      main: "#19857b",
     },
     error: {
-      main: red.A400
-    }
-  }
-})
+      main: red.A400,
+    },
+  },
+});

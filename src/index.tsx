@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { ContextProvider } from "helpers/context";
 import App from "containers/App";
 import reportWebVitals from "./reportWebVitals";
-import "./stylesheets/base.scss";
 
 ReactDOM.render(
   <ContextProvider>

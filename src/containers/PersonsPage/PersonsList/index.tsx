@@ -2,7 +2,6 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 
 import { ILink } from 'types/types'
 
-import styles from './styles.module.scss'
 
 interface Props {
   persons: ILink[]
@@ -10,7 +9,7 @@ interface Props {
 
 export default (props: Props) => (
   <TableContainer component={Paper}>
-    <Table className={styles.table} aria-label="simple table">
+    <Table aria-label="simple table">
       <TableHead>
         <TableRow>
           <TableCell>Description</TableCell>
@@ -23,7 +22,7 @@ export default (props: Props) => (
       <TableBody>
         {props.persons &&
           props.persons.map((link: ILink) => (
-            <TableRow key={link.Link} className={styles.row}>
+            <TableRow key={link.Link}>
               <TableCell component="th" scope="row">
                 {link.Description}
               </TableCell>
@@ -36,4 +35,4 @@ export default (props: Props) => (
       </TableBody>
     </Table>
   </TableContainer>
-)
+);
