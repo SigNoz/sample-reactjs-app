@@ -2,7 +2,7 @@ import { context, trace, Span, SpanStatusCode } from "@opentelemetry/api";
 import { WebTracerProvider } from "@opentelemetry/sdk-trace-web";
 import { Resource } from "@opentelemetry/resources";
 import { SimpleSpanProcessor } from "@opentelemetry/sdk-trace-base";
-import { CollectorTraceExporter } from "@opentelemetry/exporter-collector";
+import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-http";
 import { ZoneContextManager } from "@opentelemetry/context-zone";
 import { FetchInstrumentation } from "@opentelemetry/instrumentation-fetch";
 import { FetchError } from "@opentelemetry/instrumentation-fetch/build/src/types";
@@ -13,7 +13,7 @@ const serviceName = "link-frontend";
 const resource = new Resource({ "service.name": serviceName });
 const provider = new WebTracerProvider({ resource });
 
-const collector = new CollectorTraceExporter({
+const collector = new OTLPTraceExporter({
   url: "http://localhost:4318/v1/traces",
 });
 
