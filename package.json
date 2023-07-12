@@ -39,10 +39,11 @@
     }
   },
   "devDependencies": {
-    "@opentelemetry/api": "1.0.3",
-    "@opentelemetry/context-zone": "1.0.0",
-    "@opentelemetry/exporter-collector": "0.25.0",
-    "@opentelemetry/instrumentation-fetch": "0.25.0"
+    "@opentelemetry/api": "^1.4.1",
+    "@opentelemetry/context-zone": "^1.15.0",
+    "@opentelemetry/exporter-collector": "^0.25.1-alpha.23",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.41.0",
+    "@opentelemetry/instrumentation-fetch": "^0.41.0"
   },
   "browserslist": {
     "production": [
